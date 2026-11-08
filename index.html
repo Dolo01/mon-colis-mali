@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Mon Colis Mali</title>
+<meta name="description" content="Commandez en Chine, à Lomé, au Burkina, au Niger et au Sénégal, recevez vos colis au Mali.">
+<meta name="theme-color" content="#0f2466">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Colis Mali">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<div class="wall" id="wall" hidden aria-hidden="true">
+  <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+    <defs><radialGradient id="gdot"><stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/></radialGradient></defs>
+    <g fill="none" stroke="#ffffff" stroke-opacity=".16" stroke-width="1.5" stroke-dasharray="4 8">
+      <path d="M1320 140 Q 1000 40 640 470"/><path d="M380 560 Q 520 420 640 470"/><path d="M180 430 Q 400 330 640 470"/><path d="M820 500 Q 740 420 640 470"/><path d="M760 360 Q 720 380 640 470"/>
+      <path d="M-40 760 Q 500 640 1480 820" stroke-opacity=".08"/><path d="M-40 260 Q 700 120 1480 300" stroke-opacity=".07"/>
+    </g>
+    <path d="M-60 880 C 300 700, 900 980, 1500 640" fill="none" stroke="#f39314" stroke-opacity=".55" stroke-width="5"/>
+    <path d="M-60 900 C 320 740, 920 1010, 1500 690" fill="none" stroke="#f39314" stroke-opacity=".2" stroke-width="2"/>
+    <g fill="url(#gdot)"><circle cx="640" cy="470" r="34"/><circle cx="1320" cy="140" r="22"/><circle cx="380" cy="560" r="18"/><circle cx="180" cy="430" r="18"/><circle cx="820" cy="500" r="18"/><circle cx="760" cy="360" r="18"/></g>
+    <g fill="#fff"><circle cx="640" cy="470" r="6"/><circle cx="1320" cy="140" r="4"/><circle cx="380" cy="560" r="4"/><circle cx="180" cy="430" r="4"/><circle cx="820" cy="500" r="4"/><circle cx="760" cy="360" r="4"/></g>
+    <g fill="#ffffff" fill-opacity=".5" font-family="Public Sans, sans-serif" font-size="13" font-weight="600" letter-spacing="2"><text x="655" y="500">BAMAKO</text><text x="1260" y="120">CHINE</text><text x="340" y="590">LOMÉ</text><text x="130" y="410">DAKAR</text><text x="836" y="525">NIAMEY</text><text x="772" y="345">OUAGADOUGOU</text></g>
+    <g transform="translate(1040 210) rotate(-28)" fill="#ffffff" fill-opacity=".85"><path d="M0 0 L60 -4 L74 -18 L82 -18 L76 -3 L110 -2 Q120 0 110 2 L76 3 L82 18 L74 18 L60 4 L0 0Z" transform="scale(1.1)"/></g>
+  </svg>
+  <div class="tri"><i></i><i></i><i></i></div>
+</div>
+<div class="shell">
+  <aside class="side" aria-label="Navigation">
+    <div class="sbrand" style="display:block;padding:4px 8px 22px"><span class="logocard" id="sideCard"><img id="sideLogo" alt="Mon Colis Mali"></span></div>
+    <nav class="nav" id="nav"></nav>
+    <div class="sfoot">
+      <button class="install" data-act="install" hidden>Installer l'application</button>
+      <div id="sideUser" class="row" style="gap:10px;color:#fff"></div>
+    </div>
+  </aside>
+  <div class="content">
+    <header class="topbar">
+      <div class="mob"><span class="moblogo"><img id="mobLogo" alt="Mon Colis Mali"></span></div>
+      <div class="who" id="who"></div>
+    </header>
+    <div class="page">
+      <div id="loading" class="empty" style="min-height:60vh;align-content:center">Chargement…</div>
+      <div id="auth" hidden></div>
+      <div id="phead"></div>
+      <div id="hero"></div>
+      <div id="app" class="app" hidden>
+        <section class="panel" aria-label="Liste"><div id="listHead"></div><div id="listBody"></div></section>
+        <section class="panel" id="detail" aria-live="polite"></section>
+      </div>
+    </div>
+  </div>
+  <nav class="bnav" id="bnav" aria-label="Navigation"></nav>
+</div>
+
+<dialog id="dlg"><div id="dlgInner" style="display:flex;flex-direction:column;min-height:0"></div></dialog>
+<div class="toast" id="toast" hidden></div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
